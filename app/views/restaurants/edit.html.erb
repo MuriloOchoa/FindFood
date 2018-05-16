@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="col-md-4">
+    <h1>Edição de Restaurante</h1>
+
+    <%= render 'form', restaurant: @restaurant %>
+
+    <%= link_to 'Exibir', @restaurant, :class => "btn btn-primary" %>
+    <%= link_to 'Cancelar', restaurants_path, :class => "btn btn-danger" %>
+
+  </div>
+</div>

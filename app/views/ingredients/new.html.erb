@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="col-md-4">
+    <h1>Adicionar Ingrediente</h1>
+
+    <%= render 'form', ingredient: @ingredient %>
+
+    <%= link_to 'Cancelar', ingredients_path, :class => "btn btn-danger" %>
+  </div>
+</div>
