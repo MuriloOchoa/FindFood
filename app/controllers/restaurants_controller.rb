@@ -17,6 +17,11 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new
   end
 
+  def homepage
+    @restaurants = Restaurant.all
+    @restaurants = @restaurants.joins("INNER JOIN dishes ON dishes.restaurant_id = restaurants.id AND dishes.category_id = ", params[:category_id]).distinct unless params[:category_id].blank?
+  end
+
   # GET /restaurants/1/edit
   def edit
   end
